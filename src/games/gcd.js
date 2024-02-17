@@ -11,19 +11,18 @@ const round = () => {
   const question = `${numberOne} ${numberTwo}`;
 
   const gcd = () => {
-    const devNumberOne = [];
-    for (let i = 1; i <= numberOne; i += 1) {
-      if (numberOne % i === 0) {
-        devNumberOne.push(i);
+    const findDivisior = (randomNumber) => {
+      const arr = [];
+      for (let i = 1; i <= randomNumber; i += 1) {
+        if (randomNumber % i === 0) {
+          arr.push(i);
+        }
       }
-    }
+      return arr;
+    };
 
-    const devNumberTwo = [];
-    for (let i = 1; i <= numberTwo; i += 1) {
-      if (numberTwo % i === 0) {
-        devNumberTwo.push(i);
-      }
-    }
+    const devNumberOne = findDivisior(numberOne);
+    const devNumberTwo = findDivisior(numberTwo);
 
     const commonDev = [];
     for (let i = 0; i < devNumberOne.length; i += 1) {
