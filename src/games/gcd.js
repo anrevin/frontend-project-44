@@ -5,34 +5,40 @@ const rules = 'Find the greatest common divisor of given numbers.';
 
 const round = () => {
   const numberOne = getRandomNumber(1, 10);
+
   const numberTwo = getRandomNumber(1, 10);
+
   const question = `${numberOne} ${numberTwo}`;
-  const gcd = () => {
-    const devNumberOne = [];
+
+  const greatcommondivisor = () => {
+    const divNumberOne = [];
     for (let i = 1; i <= numberOne; i += 1) {
       if (numberOne % i === 0) {
-        devNumberOne.push(i);
+        divNumberOne.push(i);
       }
     }
-    const devNumberTwo = [];
+
+    const divNumberTwo = [];
     for (let i = 1; i <= numberTwo; i += 1) {
       if (numberTwo % i === 0) {
-        devNumberTwo.push(i);
+        divNumberTwo.push(i);
       }
     }
-    const commonDev = [];
-    for (let i = 0; i < devNumberOne.length; i += 1) {
-      for (let j = 0; j < devNumberTwo.length; j += 1) {
-        if (devNumberOne[i] === devNumberTwo[j]) {
-          commonDev.push(devNumberOne[i]);
+
+    const commonDiv = [];
+    for (let i = 0; i < divNumberOne.length; i += 1) {
+      for (let j = 0; j < divNumberTwo.length; j += 1) {
+        if (divNumberOne[i] === divNumberTwo[j]) {
+          commonDiv.push(divNumberOne[i]);
         }
       }
     }
-    const greatestCommonDevision = commonDev[commonDev.length - 1];
-    return greatestCommonDevision;
+    return commonDiv[commonDiv.length - 1];
   };
-  const rightAnswer = gcd();
+
+  const rightAnswer = greatcommondivisor();
   const result = [question, rightAnswer.toString()];
+
   return result;
 };
 
