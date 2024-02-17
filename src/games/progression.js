@@ -4,7 +4,7 @@ import gameLogic from '../index.js';
 const rules = 'What number is missing in the progression?';
 
 const round = () => {
-  const lengthProgression = getRandomNumber(8, 11);
+  const lengthProgression = 10;
 
   const firstElement = getRandomNumber(1, 100);
 
