@@ -23,7 +23,7 @@ const round = () => {
 
   progression[numberHiddenElement] = '..';
 
-  const question = progression;
+  const question = progression.join(' ');
 
   const result = [question, rightAnswer.toString()];
 
