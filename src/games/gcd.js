@@ -10,33 +10,34 @@ const round = () => {
 
   const question = `${numberOne} ${numberTwo}`;
 
-  const greatcommondivisor = () => {
-    const divNumberOne = [];
+  const gcd = () => {
+    const devNumberOne = [];
     for (let i = 1; i <= numberOne; i += 1) {
       if (numberOne % i === 0) {
-        divNumberOne.push(i);
+        devNumberOne.push(i);
       }
     }
 
-    const divNumberTwo = [];
+    const devNumberTwo = [];
     for (let i = 1; i <= numberTwo; i += 1) {
       if (numberTwo % i === 0) {
-        divNumberTwo.push(i);
+        devNumberTwo.push(i);
       }
     }
 
-    const commonDiv = [];
-    for (let i = 0; i < divNumberOne.length; i += 1) {
-      for (let j = 0; j < divNumberTwo.length; j += 1) {
-        if (divNumberOne[i] === divNumberTwo[j]) {
-          commonDiv.push(divNumberOne[i]);
+    const commonDev = [];
+    for (let i = 0; i < devNumberOne.length; i += 1) {
+      for (let j = 0; j < devNumberTwo.length; j += 1) {
+        if (devNumberOne[i] === devNumberTwo[j]) {
+          commonDev.push(devNumberOne[i]);
         }
       }
     }
-    return commonDiv[commonDiv.length - 1];
+    const greatestCommonDevision = commonDev[commonDev.length - 1];
+    return greatestCommonDevision;
   };
 
-  const rightAnswer = greatcommondivisor();
+  const rightAnswer = gcd();
   const result = [question, rightAnswer.toString()];
 
   return result;
