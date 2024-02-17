@@ -5,9 +5,7 @@ const rules = 'Find the greatest common divisor of given numbers.';
 
 const round = () => {
   const numberOne = getRandomNumber(1, 10);
-
   const numberTwo = getRandomNumber(1, 10);
-
   const question = `${numberOne} ${numberTwo}`;
   const gcd = () => {
     const devNumberOne = [];
