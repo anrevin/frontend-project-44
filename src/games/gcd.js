@@ -13,6 +13,18 @@ const findDivisior = (randomNumber) => {
   return arr;
 };
 
+const greatestCommonDivisor = (arr1, arr2) => {
+  const commonDiv = [];
+  for (let i = 0; i < arr1.length; i += 1) {
+    for (let j = 0; j < arr2.length; j += 1) {
+      if (arr1[i] === arr2[j]) {
+        commonDiv.push(arr1[i]);
+      }
+    }
+  }
+  return commonDiv[commonDiv.length - 1];
+};
+
 const round = () => {
   const numberOne = getRandomNumber(1, 10);
 
@@ -20,22 +32,10 @@ const round = () => {
 
   const question = `${numberOne} ${numberTwo}`;
 
-  const greatestCommonDivisor = () => {
-    const divNumberOne = findDivisior(numberOne);
-    const divNumberTwo = findDivisior(numberTwo);
+  const divNumberOne = findDivisior(numberOne);
+  const divNumberTwo = findDivisior(numberTwo);
 
-    const commonDiv = [];
-    for (let i = 0; i < divNumberOne.length; i += 1) {
-      for (let j = 0; j < divNumberTwo.length; j += 1) {
-        if (divNumberOne[i] === divNumberTwo[j]) {
-          commonDiv.push(divNumberOne[i]);
-        }
-      }
-    }
-    return commonDiv[commonDiv.length - 1];
-  };
-
-  const rightAnswer = greatestCommonDivisor();
+  const rightAnswer = greatestCommonDivisor(divNumberOne, divNumberTwo);
   const result = [question, rightAnswer.toString()];
 
   return result;
