@@ -1,10 +1,20 @@
-import getRandomNumber from '../randomNumber.js';
+import getRandomNumber from '../utils.js';
 import gameLogic from '../index.js';
 
 const rules = 'What number is missing in the progression?';
 
+const getProgression = (lengthProgression, stepProgression, firstElement) => {
+  const progression = [firstElement];
+
+  for (let i = 0; i < lengthProgression - 1; i += 1) {
+    const addElement = progression[i] + stepProgression;
+    progression.push(addElement);
+  }
+  return progression;
+};
+
 const round = () => {
-  const lengthProgression = 10;
+  const lengthProgression = getRandomNumber(5, 11);
 
   const firstElement = getRandomNumber(1, 100);
 
@@ -12,12 +22,7 @@ const round = () => {
 
   const numberHiddenElement = getRandomNumber(0, lengthProgression);
 
-  const progression = [firstElement];
-
-  for (let i = 0; i < lengthProgression - 1; i += 1) {
-    const addElement = progression[i] + stepProgression;
-    progression.push(addElement);
-  }
+  const progression = getProgression(lengthProgression, stepProgression, firstElement);
 
   const rightAnswer = progression[numberHiddenElement];
 
@@ -25,8 +30,6 @@ const round = () => {
 
   const question = progression.join(' ');
 
-  const result = [question, rightAnswer.toString()];
-
-  return result;
+  return [question, rightAnswer.toString()];
 };
 export default () => gameLogic(rules, round);

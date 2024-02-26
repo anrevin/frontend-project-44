@@ -1,5 +1,7 @@
 import readlineSync from 'readline-sync';
 
+const roundCount = 3;
+
 export default (rules, round) => {
   const name = readlineSync.question('May I have your name?: ');
 
@@ -7,21 +9,20 @@ export default (rules, round) => {
 
   console.log(rules);
 
-  const roundCount = 3;
-
   for (let i = 0; i < roundCount; i += 1) {
-    const startRound = round();
+    const [question, rightAnswer] = round();
 
-    console.log(`Question: ${startRound[0]}`);
+    console.log(`Question: ${question}`);
 
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (userAnswer === startRound[1]) {
+    if (userAnswer === rightAnswer) {
       console.log('Correct!');
     } else {
-      return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${startRound[1]}'.\nLet's try again, ${name}!`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`);
+      return;
     }
   }
 
-  return console.log(`Congratulations, ${name}!`);
+  console.log(`Congratulations, ${name}!`);
 };
