@@ -5,7 +5,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/4f5eb5a075e91295ee3c/maintainability)](https://codeclimate.com/github/anrevin/frontend-project-44/maintainability)
 
 # Description:
-<img src="https://profobus.ru/images/feature_variant/11/default_og_image.jpg" />  
+<img src="https://ru.hexlet.io/" />  
 
 Welcome to my first project.  This repository consists of several arithmetic console games that reflect my skills gained in the Hexlet course.
 
