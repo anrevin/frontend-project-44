@@ -5,7 +5,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/4f5eb5a075e91295ee3c/maintainability)](https://codeclimate.com/github/anrevin/frontend-project-44/maintainability)
 
 # Description:
-<img src="https://avatars.mds.yandex.net/get-socsnippets/12403076/2a0000018c6fbac2d8d06253a31e97878f0b/square_83/>  
+<img src="https://avatars.mds.yandex.net/get-socsnippets/5331983/2a000001863e65537d930c9b2bc7e3e01829/square_83"/>  
 
 Welcome to my first project.  This repository consists of several arithmetic console games that reflect my skills gained in the Hexlet course.
 
