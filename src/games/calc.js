@@ -6,21 +6,15 @@ const rules = 'What is the result of the expression?';
 const charactersOfExpression = ['+', '-', '*'];
 
 const calculate = (num1, num2, operator) => {
-  let result;
-
   switch (operator) {
     case '+':
-      result = num1 + num2;
-      break;
+      return num1 + num2;
     case '-':
-      result = num1 - num2;
-      break;
+      return num1 - num2;
     case '*':
-      result = num1 * num2;
-      break;
-    default: return console.log('an unknown character has been processed');
+      return num1 * num2;
+    default: throw new Error('an unknown character has been processed');
   }
-  return result;
 };
 
 const round = () => {
